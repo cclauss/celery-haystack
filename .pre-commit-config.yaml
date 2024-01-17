@@ -10,17 +10,10 @@ ci:
   submodules: true
 
 repos:
-  - repo: local
-    hooks:
-    - id: remove-ruff-cache
-      name: remove ruff cache
-      language: system
-      entry: rm -fr *ruff_cache
-
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.13
+    rev: d16c4a2d25a27dad1ef26c0e496471139adb4522
     hooks:
-      - id: ruff  # See pyproject.toml for args
+      - id: ruff
 
   - repo: https://github.com/codespell-project/codespell
     rev: v2.2.6
